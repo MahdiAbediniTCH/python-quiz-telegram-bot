@@ -2,8 +2,8 @@ from time import clock
 from telepot.namedtuple import KeyboardButton,ReplyKeyboardMarkup
 import telepot as t
 #attention : dont change array '' in lists.
-k=ReplyKeyboardMarkup(keyboard=[[KeyboardButton(text='شروع تست')]])
-k1=ReplyKeyboardMarkup(keyboard=[[KeyboardButton(text='تست دوباره')]])
+k=ReplyKeyboardMarkup(keyboard=[[KeyboardButton(text='start test')]])
+k1=ReplyKeyboardMarkup(keyboard=[[KeyboardButton(text='try again')]])
 start=0
 lis=['']
 lis1=['','5*6',
@@ -58,7 +58,7 @@ def main(ms):
                     timer=30
                 final_score=no*(70-timer)/4
             if final_score>100:
-                final_score=100  
+                final_score=100
             lis=['']
             bot.sendMessage(ms['chat']['id'],'Time : '+str(int(timerer))+' seconds \n Number of write answers : '+str(no)+'/10 \n Final score : '+str(int(final_score))+'/100',reply_markup=k1)
         if start!=0:
